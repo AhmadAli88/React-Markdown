@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-const DynamicMarkdown = () => {
+const DynamicMarkdownTwo = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    fetch('/src/path-to-markdown-file.md')
+    fetch('/src/table.md')
       .then((res) => res.text())
       .then((text) => setMarkdown(text));
   }, []);
@@ -13,4 +13,4 @@ const DynamicMarkdown = () => {
   return <ReactMarkdown>{markdown}</ReactMarkdown>;
 };
 
-export default DynamicMarkdown;
+export default DynamicMarkdownTwo;
